@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+autopep8 = "*"
+flake8 = "*"
+pytest = "*"
+pytest-html = "*"
+pytest-html-reporter = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+# pytest-html
+# https://github.com/pytest-dev/pytest-html
+# pytest-html-reporter
+# https://github.com/prashanth-sams/pytest-html-reporter
+# pytest-cov
+# https://pytest-cov.readthedocs.io/en/latest/
+test = "py -m pytest -v ./tests --html=./reports/pytest-html/report.html --self-contained-html --html-report=./reports/pytest-html-reporter --cov=sample --cov-report html:reports/cov_html --cov-branch"

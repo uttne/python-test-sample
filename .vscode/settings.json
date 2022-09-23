@@ -1,0 +1,14 @@
+{
+    "python.testing.pytestArgs": [
+        "tests",
+        "--html=./reports/pytest-html/report.html",
+        "--self-contained-html",
+        "--html-report=./reports/pytest-html-reporter",
+        "--cov=sample",
+        "--cov-report",
+        "html:reports/cov_html",
+        "--cov-branch"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
